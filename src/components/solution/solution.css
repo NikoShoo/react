@@ -1,0 +1,91 @@
+.solution {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.solution .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solution h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #163d68;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.solution__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.solution__card {
+  background-color: #f7f8fa;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.solution__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.solution__icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+
+  border: 3px solid #67b437;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  color: #67b437;
+}
+
+.solution__card h3 {
+  font-size: 20px;
+  color: #163d68;
+  margin-bottom: 10px;
+}
+
+.solution__card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+/* Планшет */
+@media (max-width: 992px) {
+  .solution__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Телефон */
+@media (max-width: 768px) {
+  .solution {
+    padding: 50px 0;
+  }
+
+  .solution h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .solution__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution__card {
+    padding: 25px;
+  }
+}

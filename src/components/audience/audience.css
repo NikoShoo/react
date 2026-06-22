@@ -1,0 +1,31 @@
+.audience {
+  padding: 80px 0;
+  background: #f7f8fa;
+}
+
+.audience h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #163d68;
+  margin-bottom: 50px;
+}
+
+.audience__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.audience__card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  .audience__grid {
+    grid-template-columns: 1fr;
+  }
+}

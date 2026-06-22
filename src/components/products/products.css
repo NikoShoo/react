@@ -1,0 +1,121 @@
+.products {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.products .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #163d68;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: #f7f8fa;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: #67b437;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.product-card h3 {
+  font-size: 24px;
+  color: #163d68;
+  margin-bottom: 16px;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.product-card__price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #67b437;
+  margin-bottom: 24px;
+}
+
+.product-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #67b437;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  opacity: 0.9;
+}
+
+/* Выделенная карточка */
+
+.product-card--featured {
+  background: #163d68;
+  color: white;
+  transform: scale(1.05);
+}
+
+.product-card--featured h3,
+.product-card--featured p {
+  color: white;
+}
+
+.product-card--featured .product-card__price {
+  color: #8dd15b;
+}
+
+/* Планшет */
+
+@media (max-width: 992px) {
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Телефон */
+
+@media (max-width: 768px) {
+  .products {
+    padding: 50px 0;
+  }
+
+  .products h2 {
+    font-size: 28px;
+  }
+
+  .products__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card--featured {
+    transform: none;
+  }
+}
